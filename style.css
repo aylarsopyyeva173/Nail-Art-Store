@@ -1,0 +1,182 @@
+:root{
+--culoare-principala:#ff66b2;
+--culoare-secundara:#ffe6f2;
+--culoare-accent:#ff3385;
+
+--spatiu-mare:80px;
+--spatiu-mediu:40px;
+--spatiu-mic:15px;
+
+--padding-zona:20px;
+}
+
+
+body{
+margin-left:var(--spatiu-mare);
+margin-right:var(--spatiu-mare);
+font-family:'Poppins', sans-serif;
+background:#fafafa;
+}
+
+
+@media(max-width:900px){
+body{
+margin-left:var(--spatiu-mediu);
+margin-right:var(--spatiu-mediu);
+}
+}
+
+@media(max-width:600px){
+body{
+margin-left:var(--spatiu-mic);
+margin-right:var(--spatiu-mic);
+}
+}
+
+/* GRID */
+
+main{
+display:grid;
+grid-template-columns:1fr;
+gap:40px;
+}
+
+@media(max-width:900px){
+main{
+gap:25px;
+}
+}
+
+@media(max-width:600px){
+main{
+gap:15px;
+}
+}
+
+
+header{
+background:var(--culoare-principala);
+color:white;
+padding:var(--padding-zona);
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+section{
+background:var(--culoare-secundara);
+padding:var(--padding-zona);
+border-radius:12px;
+border:2px solid var(--culoare-accent);
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+footer{
+background:var(--culoare-principala);
+color:white;
+padding:var(--padding-zona);
+border-radius:12px;
+}
+
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+padding:0;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/* MEDIA */
+
+img, iframe, video{
+width:100%;
+max-width:600px;
+min-width:200px;
+height:auto;
+display:block;
+margin:auto;
+}
+
+
+table{
+width:100%;
+border-collapse:collapse;
+display:block;
+overflow-x:auto;
+}
+
+th, td{
+border:1px solid #ccc;
+padding:10px;
+text-align:center;
+}
+
+thead{
+background:var(--culoare-accent);
+color:white;
+}
+
+tbody tr:nth-child(odd){
+background:#ffffff;
+}
+
+tbody tr:nth-child(even){
+background:#f4f4f4;
+}
+
+
+.container-iframe{
+display:flex;
+gap:20px;
+align-items:flex-start;
+flex-wrap:wrap;
+}
+
+.taburi-iframe{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.taburi-iframe a{
+display:block;
+width:130px;
+height:40px;
+background:var(--culoare-accent);
+color:white;
+text-align:center;
+line-height:40px;
+text-decoration:none;
+border-radius:8px;
+transition:0.3s;
+}
+
+.taburi-iframe a:hover{
+background:var(--culoare-principala);
+}
+
+/* LINK TOP */
+
+#link-top{
+position:fixed;
+bottom:20px;
+right:20px;
+background:var(--culoare-accent);
+color:white;
+padding:12px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 3px 6px rgba(0,0,0,0.2);
+}
+
+#link-top:hover{
+background:var(--culoare-principala);
+}
